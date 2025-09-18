@@ -26,56 +26,57 @@ If you've published this library to NuGet:
 #### Using Package Manager Console:
 ```bash
 Install-Package NumberToIndianWords
-
+```
 Using .NET CLI:
 
+```bash
 dotnet add package NumberToIndianWords
+```
 
 Using Visual Studio:
 
-Right-click your project in Solution Explorer.
-
-Select Manage NuGet Packages.
-
-Search for NumberToIndianWords.
-
-Click Install.
+1.Right-click your project in Solution Explorer.
+2.Select Manage NuGet Packages.
+3.Search for NumberToIndianWords.
+4.Click Install.
 
 
 🛠️ How to Use
 Step 1: Add the Namespace
-cSharp c#
+
+```csharp
 using NumberToIndianWords;
+```
 
 Step 2: Call the Method
-cSharp c#
+```csharp
 decimal amount = 123456.78m;
 string result = amount.ToIndianCurrencyWords();
 Console.WriteLine(result);
-
+```
 
 ✅ Output
+```code
 one lakh twenty three thousand four hundred and fifty six rupees and seventy eight paise
+```
 
 💡 Supported Types
 You can use .ToIndianCurrencyWords() on:
-
 decimal
-
 float
-
 int
-
 long
-
 short
 
+Examples:
+```Csharp
 Console.WriteLine(123.45m.ToIndianCurrencyWords());       // decimal
 Console.WriteLine(99.99f.ToIndianCurrencyWords());        // float
 Console.WriteLine(10000000.ToIndianCurrencyWords());      // int
 Console.WriteLine(123456789L.ToIndianCurrencyWords());    // long
 Console.WriteLine(((short)250).ToIndianCurrencyWords());  // short
 Console.WriteLine((-5000).ToIndianCurrencyWords());       // negative int
+```
 
 📋 Output Samples
 Input	Output
@@ -86,13 +87,9 @@ Input	Output
 
 🧪 Edge Cases Handled
 ✅ Zero values → "zero rupees"
-
 ✅ Negative values → "negative one lakh rupees"
-
 ✅ Large numbers → up to "kharab"
-
 ✅ Decimal precision → "and paise"
-
 ✅ Grammar → "one rupee" vs "two rupees"
 
 
